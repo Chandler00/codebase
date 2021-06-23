@@ -1,14 +1,12 @@
 """
 ****************************************
  * @author: Chandler Qian
- * Date: 3/9/21
- * Project: safety clustering
+ * Date: 
+ * Project: 
  * Purpose: common utilities for the project
  * Python version: 3.8.1
- * Project root: local /home/usr/projects/safety-recommendation
-                 remote /home/usr/projects/safety_rec
+ * Project root: 
  * Environment package: safety_rec on the remote
- * Copyright 2021 Geotab DNA. All Rights Reserved.
  ****************************************
 """
 
@@ -30,10 +28,10 @@ def email_sender(subject, text, email):
     """
     msg = MIMEText(text)
     msg['Subject'] = subject
-    msg['From'] = 'usr@geotab.com'
+    msg['From'] = 'usr@gmai.com'
     msg['To'] = ",".join(email)
     s = smtplib.SMTP('host')
-    s.sendmail('usr@geotab.com', email, msg.as_string())
+    s.sendmail('usr@gmail.com', email, msg.as_string())
     s.quit()
 
 
@@ -92,18 +90,3 @@ def logger_log(filepath):
 
     return log
 
-
-def date_query(query: str, date: str, client: object):
-    """ filter the query by date
-
-    Args:
-        query: bigquery query
-        date: the date filter for the query  exg: '2021-02-01'
-        client: bigquery object
-
-    Returns:
-        queried dataframe
-    """
-    query = query + f' where date(_partitiontime) = "{date}"'.format(date=date)
-    df = client.query(query).to_dataframe()
-    return df

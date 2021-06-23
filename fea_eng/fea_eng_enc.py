@@ -6,8 +6,7 @@
  * Purpose: feature engineering for autoencoders
  * Python version: 3.8.1
  * Project root: /home/usr/projects/safety-recommendation
- * Environment package: safety_rec on the remote
- * Copyright 2021 Geotab DNA. All Rights Reserved.
+ * Environment package:
 ****************************************
 """
 
@@ -19,7 +18,7 @@ import yaml
 from scipy.stats.mstats import rankdata
 import re
 
-with open("./autoencoder/config.yaml", 'r') as ymlfile:
+with open("./config.yaml", 'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 
 sys.path.insert(1, cfg['directory'][
@@ -239,7 +238,7 @@ def main(method, encoder_ratio, date, save=False, bq_load=False):
     Returns
         preprocessed dataframe
     """
-    client = bigquery.Client(project='geotab-bi')
+    client = bigquery.Client(project='yourproject')
     daily_df = util.date_query(query=query_imputed_fea, date=date, client = client)
     fea_dict = client.query(
         query_fea_dict).to_dataframe()  # make sure the fea_dict is up to date

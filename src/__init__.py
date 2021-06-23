@@ -1,7 +1,7 @@
 """
 ****************************************
  * @author: Chandler Qian
- * Date: 3/11/21
+ * Date: 
  * Project: the project this script belongs to
  * Purpose: the purpose of this script
  * Python version: python version
