@@ -1,0 +1,27 @@
+#"""
+#****************************************
+# * @author: Chandler Qian
+# * Date: 3/11/21
+# * Project: the project this script belongs to
+# * Purpose: configuration file for all the tables, and parameters
+# * Project root: /home/usr/projects/safety-benchmark/autoencoder
+#****************************************
+#"""
+
+# Directory
+directory:
+  root: './'
+  safety_clu: './cluster/'
+  safety_enco: './autoencoder/'
+  autoencoder_log: './autoencoder/log'
+  fea_dict: './autoencoder/fea_dict.csv'
+  raw_data_dir: './autoencoder/raw_data/'
+
+tables:
+  fea_dict: 'geotab-bi.SafetyPrototype.safety_benchmark_fea_dict'
+  raw_data: 'geotab-bi.SafetyPrototype.Step_13_AllFeatures'
+  imputed_raw_data: 'geotab-bi.SafetyPrototype.Step_14_AllFeatures_Imputation'
+
+fea_eng_tables:
+#  feature engineering table name without metrics
+  fea_eng: 'geotab-bi.safety_fea_eng.fea'
