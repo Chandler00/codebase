@@ -1,11 +1,11 @@
 """
 ****************************************
  * @author: Chandler Qian
- * Date: 3/9/21
- * Project: safety clustering
- * Purpose: feature engineering for autoencoders
+ * Date: 
+ * Project: 
+ * Purpose: 
  * Python version: 3.8.1
- * Project root: /home/usr/projects/safety-recommendation
+ * Project root: 
  * Environment package:
 ****************************************
 """

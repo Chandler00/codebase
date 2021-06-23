@@ -6,7 +6,7 @@
  * Purpose: common utilities for the project
  * Python version: 3.8.1
  * Project root: 
- * Environment package: safety_rec on the remote
+ * Environment package:
  ****************************************
 """
 
